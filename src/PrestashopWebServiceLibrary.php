@@ -176,20 +176,20 @@ class PrestashopWebServiceLibrary
             }
         }
 
-        if (array_key_exists('PSWS-Version', $headerArray)) {
-            $this->isPrestashopVersionSupported($headerArray['PSWS-Version']);
-            $this->version = $headerArray['PSWS-Version'];
-        }
+        // if (array_key_exists('PSWS-Version', $headerArray)) {
+        //     $this->isPrestashopVersionSupported($headerArray['PSWS-Version']);
+        //     $this->version = $headerArray['PSWS-Version'];
+        // }
 
-        $this->printDebug('HTTP REQUEST HEADER', $info['request_header']);
-        $this->printDebug('HTTP RESPONSE HEADER', $header);
+        // $this->printDebug('HTTP REQUEST HEADER', $info['request_header']);
+        // $this->printDebug('HTTP RESPONSE HEADER', $header);
 
-        if ($curl_params[CURLOPT_CUSTOMREQUEST] == 'PUT' || $curl_params[CURLOPT_CUSTOMREQUEST] == 'POST') {
-            $this->printDebug('XML SENT', urldecode($curl_params[CURLOPT_POSTFIELDS]));
-        }
-        if ($curl_params[CURLOPT_CUSTOMREQUEST] != 'DELETE' && $curl_params[CURLOPT_CUSTOMREQUEST] != 'HEAD') {
-            $this->printDebug('RETURN HTTP BODY', $body);
-        }
+        // if ($curl_params[CURLOPT_CUSTOMREQUEST] == 'PUT' || $curl_params[CURLOPT_CUSTOMREQUEST] == 'POST') {
+        //     $this->printDebug('XML SENT', urldecode($curl_params[CURLOPT_POSTFIELDS]));
+        // }
+        // if ($curl_params[CURLOPT_CUSTOMREQUEST] != 'DELETE' && $curl_params[CURLOPT_CUSTOMREQUEST] != 'HEAD') {
+        //     $this->printDebug('RETURN HTTP BODY', $body);
+        // }
 
         return array(
             'status_code' => $status_code,
